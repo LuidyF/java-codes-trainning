@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String [] args){
+        var scanner = new Scanner(System.in);
+        System.out.println("Altura: ");
+        var altu = scanner.nextFloat();
+        System.out.println("Peso: ");
+        var peso = scanner.nextFloat();
+        
+        var imc = peso / (altu * altu);
+        if (imc < 18.5){
+            System.out.printf("IMC = %s\nPeso abaixo do ideal!", imc);
+        }
+        else if (imc >= 18.5 && imc <= 24.9){
+            System.out.printf("IMC = %s\nPeso ideal!", imc);
+        }
+        else if (imc >= 25 && imc <= 29.9){
+            System.out.printf("IMC = %s\nExcesso de peso!", imc);
+        }
+        else if (imc > 30){
+            if (imc >= 30 && imc <= 34.9){
+                System.out.printf("IMC = %s\nObesidade grau I!", imc);
+            }
+            else if (imc >= 35 && imc <=39.9){
+                System.out.printf("IMC = %s\nObesidade grau II!", imc);
+            }
+            else if (imc >= 40){
+                System.out.printf("IMC = %s\nObesidade grau III!", imc);
+            }
+        }
+        else{
+            System.out.printf("Opção inválida!");
+        }
+    }
+}
