@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        var scanner = new Scanner(System.in);
+        int opt;
+
+        do{
+        System.out.println("Escolha a operação: " +
+                "\n[1 - Soma] \n[2 - Subtração] \n[3 - Multiplicação] \n[4 - Divisão] \n[0 - Sair]\n");
+        opt = scanner.nextInt();
+        switch(opt) {
+            case 1:
+                System.out.println("===== Soma =====");
+                System.out.println("");
+                var s1 = scanner.nextInt();
+                System.out.println("");
+                var s2 = scanner.nextInt();
+
+                var s3 = s1 + s2;
+
+                System.out.printf("Resultado: %s\n", s3);
+                break;
+            case 2:
+                System.out.println("===== Subtração =====");
+                System.out.println("");
+                var sb1 = scanner.nextInt();
+                System.out.println("");
+                var sb2 = scanner.nextInt();
+
+                var sb3 = sb1 - sb2;
+
+                System.out.printf("Resultado: %s\n", sb3);
+                break;
+            case 3:
+                System.out.println("===== Multiplicação =====");
+                System.out.println("");
+                var m1 = scanner.nextInt();
+                System.out.println("");
+                var m2 = scanner.nextInt();
+
+                var m3 = m1 * m2;
+
+                System.out.printf("Resultado: %s\n", m3);
+                break;
+            case 4:
+                System.out.println("===== Divisão =====");
+                System.out.println("");
+                var d1 = scanner.nextInt();
+                System.out.println("");
+                var d2 = scanner.nextInt();
+
+                var d3 = d1 / d2;
+
+                System.out.printf("Resultado: %s\n", d3);
+                break;
+        }
+
+        }
+        while (opt != 0);
+
+
+
+
+
+    }
+}
